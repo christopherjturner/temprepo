@@ -1,0 +1,5 @@
+
+name   = foo
+image  = foo
+tag    = 1.0.0
+memory = 256
