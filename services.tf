@@ -27,7 +27,7 @@ locals {
       name              = "cdp-basic-node-frontend"
       type              = "frontend"
       container_image   = "cdp-basic-node-frontend"
-      container_version = "latest"
+      container_version = "1.1.0"
       container_port    = 3000
       desired_count     = 2
       task_cpu          = 512
