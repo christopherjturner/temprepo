@@ -2,13 +2,13 @@
 locals {
   services = [
     {
-      name              = "service-a"
-      type              = "frontend"
+      name = "service-a"
+      type = "frontend"
       container_image   = "iac-hello-world"
       container_version = "service-a"
       container_port    = 8080
       desired_count     = 2
-      task_cpu          = 256
+      task_cpu           = 256
       task_memory       = 512
       healthcheck       = "/"
     },
