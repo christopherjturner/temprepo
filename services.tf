@@ -44,6 +44,7 @@ locals {
       task_cpu          = 512
       task_memory       = 1024
       healthcheck       = "/"
+
     }
   ]
 }
