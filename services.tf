@@ -2,7 +2,7 @@
 locals {
   services = [
     {
-      name              = "service-a"
+      name             = "service-a"
       type              = "frontend"
       container_image   = "iac-hello-world"
       container_version = "service-a"
