@@ -51,5 +51,15 @@
     "name": "cdp-node-frontend-template",
     "task_cpu": 512,
     "task_memory": 1024
+  },
+  {
+    "container_image": "foo-frontend",
+    "container_port": 3000,
+    "container_version": "v0.1.0",
+    "desired_count": 2,
+    "healthcheck": "/cdp-basic-node-frontend",
+    "name": "foo-frontend",
+    "task_cpu": 512,
+    "task_memory": 1024
   }
 ]
