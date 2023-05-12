@@ -1,0 +1,53 @@
+[
+  {
+    "container_image": "cdp-deployments",
+    "container_port": 8085,
+    "container_version": "latest",
+    "desired_count": 1,
+    "env_vars": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_URLS": "http://+:8085",
+        "AppBasePath": "/cdp-deployments"
+    },
+    "healthcheck": "/cdp-deployments/health",
+    "name": "cdp-deployments",
+    "secrets": { },
+    "task_cpu": 512,
+    "task_memory": 1024
+  },
+  {
+    "container_image": "cdp-dotnet-backend-exemplar",
+    "container_port": 8085,
+    "container_version": "latest",
+    "desired_count": 2,
+    "env_vars": {
+        "ASPNETCORE_ENVIRONMENT": "DevelopmentNonSecure",
+        "ASPNETCORE_URLS": "http://+:8085",
+        "AppBasePath": "/dotnet-backend-exemplar"
+    },
+    "healthcheck": "/dotnet-backend-exemplar/health",
+    "name": "dotnet-backend-exemplar",
+    "secrets": {
+    },
+    "task_cpu": 512,
+    "task_memory": 1024
+  },
+  {
+    "container_image": "cdp-portal-deployables-backend",
+    "container_port": 8085,
+    "container_version": "v0.13.0",
+    "desired_count": 1,
+    "env_vars": {
+        "ASPNETCORE_ENVIRONMENT": "Production",
+        "ASPNETCORE_URLS": "http://+:8085",
+        "EcrEvents__Enabled": "true"
+    },
+    "healthcheck": "/healthz",
+    "name": "cdp-portal-deployables-backend",
+    "secrets": {
+        "NoSql__DatabaseApiKey": "cdp/services/cdp-portal-deployables-backend:db_password"
+    },
+    "task_cpu": 512,
+    "task_memory": 4096
+  }
+]
