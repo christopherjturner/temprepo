@@ -2,7 +2,7 @@
   {
     "container_image": "iac-hello-world",
     "container_port": 8080,
-    "container_version": "service-a",
+    "container_version": "v0.3.0",
     "desired_count": 2,
     "healthcheck": "/",
     "name": "service-a",
