@@ -13,7 +13,7 @@
     "container_image": "cdp-basic-node-frontend",
     "container_port": 3000,
     "container_version": "latest",
-    "desired_count": 2,
+    "desired_count": 1,
     "healthcheck": "/cdp-basic-node-frontend",
     "name": "cdp-basic-node-frontend",
     "task_cpu": 512,
